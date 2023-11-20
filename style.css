@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 200px;
+  padding: 20px 5px;
+}
+
+.all-center {
+  display: flex;
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  padding: 0 10px;
+}
+nav {
+  background-color: white;
+  border: 1px solid #e0dada;
+  height: 80px;
+  width: 100%;
+  display: fixed;
+}
+.nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: none;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: gold;
+  z-index: 100;
+}
+
+nav ul li {
+  display: block;
+  margin: 0 5px;
+  padding: 15px;
+  border-bottom: 2px solid #131111;
+}
+nav ul li:last-child {
+  border-bottom: 0;
+}
+nav ul li a {
+  color: #131111;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+  margin: auto;
+}
+
+.check-btn {
+  font-size: 30px;
+  color: #131111;
+  float: right;
+  line-height: 80px;
+}
+#check:checked ~ ul {
+  display: block;
+}
+
+/*---media queries---*/
+
+@media screen and (min-width: 768px) {
+  .check-btn {
+    display: none;
+  }
+  nav ul {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 0;
+    display: inline-block;
+    width: auto;
+    background-color: transparent;
+    z-index: 0;
+  }
+  .all-center {
+    padding: 0 0;
+  }
+  nav ul li {
+    display: inline-block;
+    margin: 0 5px;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    border-bottom: 0;
+  }
+}
+/*- grid---*/
+
+.service-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 90%;
+  margin-top: 100px;
+  gap: 10px;
+  align-items: center;
+}
+
+.service--image {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+  align-items: center;
+}
+
+.service--image div img {
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+}
+.service--text h1 {
+  font-size: 60px;
+  padding: 20px;
+  font-weight: 900;
+  color: #4b5563;
+}
+
+.service--text p {
+  font-size: 25px;
+  font-weight: 200;
+  color: #4b5563;
+  line-height: 40px;
+  font-size: 20px;
+}
+.service--text .btn button {
+  background-color: #ffaf12;
+  border-radius: 40px;
+  padding: 10px;
+  border: 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.service--text .btn button p {
+  padding: 0 !important;
+  
+}
+
+@media (max-width: 768px) {
+  .service-container {
+    grid-template-columns: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 390px) {
+  .service--text .btn button {
+    
+}
+}
